@@ -22,6 +22,8 @@ All GitHub activity the skills describe targets the user's own repo.
 - **finish**: upstream author's personal paths (`memory/capture.md`, `reviews/daily/`,
   `routines/evening.md`) made optional.
 - **context-cleanup**: removed the author's Syncfusion example.
+- **steward** removed (it ran an unattended cloud session that pushed commits and
+  posted PR comments); orch now stops once the PR is up.
 - Marketplace renamed to `veryaaron`.
 
 ## Pulling upstream changes
