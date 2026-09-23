@@ -1,6 +1,6 @@
 ---
 name: orch-fable-high
-description: Generic worker (fable, high effort — rare, distilled input only). Dispatched by the orch skill, or by any skill without its own worker agents — routing rules in the orch skill's routing.md.
+description: Generic worker (fable, high effort — rare, distilled input only; use ONLY when the user has explicitly asked for Fable in this session). Dispatched by the orch skill, or by any skill without its own worker agents — routing rules in the orch skill's routing.md.
 model: fable
 effort: high
 ---

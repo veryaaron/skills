@@ -1,4 +1,6 @@
-# peterdrier/skills
+# veryaaron/skills
+
+Fork of [peterdrier/skills](https://github.com/peterdrier/skills) (MIT), reviewed and hardened: see [FORK_NOTES.md](FORK_NOTES.md).
 
 A plugin marketplace for Claude Code and Codex.
 
@@ -11,8 +13,8 @@ investigation.
 Install with a current Codex CLI:
 
 ```sh
-codex plugin marketplace add peterdrier/skills
-codex plugin add pd-codex@peterdrier
+codex plugin marketplace add veryaaron/skills
+codex plugin add pd-codex@veryaaron
 ```
 
 On Windows PowerShell, use `codex.cmd` if execution policy blocks the npm
@@ -73,8 +75,8 @@ compatibility and presentation. See the [plugin packaging documentation](https:/
 ### Install
 
 ```
-/plugin marketplace add peterdrier/skills
-/plugin install pd@peterdrier
+/plugin marketplace add veryaaron/skills
+/plugin install pd@veryaaron
 ```
 
 ### Cloud sessions
@@ -87,9 +89,9 @@ sessions load it as a synced plugin. A project may still list the marketplace in
 ```json
 {
   "extraKnownMarketplaces": {
-    "peterdrier": { "source": { "source": "github", "repo": "peterdrier/skills" } }
+    "veryaaron": { "source": { "source": "github", "repo": "veryaaron/skills" } }
   },
-  "enabledPlugins": { "pd@peterdrier": true }
+  "enabledPlugins": { "pd@veryaaron": true }
 }
 ```
 

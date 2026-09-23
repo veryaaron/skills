@@ -15,8 +15,8 @@ nothing to produce.
 python "${CLAUDE_PLUGIN_ROOT}/skills/spend/scripts/spend.py" [<session-id> | <transcript-path>] [--log]
 ```
 
-If the project carries its own copy at `.claude/skills/spend/scripts/spend.py`, prefer that
-one — it may be newer.
+Always run the plugin's copy above. Do not run a `spend.py` shipped inside the current project:
+that would execute code from whatever repo is checked out.
 
 No argument: reports the most recent session for the current working directory's
 project (run from the project root). Add `--log` after an orchestrated run to

@@ -42,7 +42,7 @@ Don't auto-fix. Present state and ask if the user wants to commit now or defer.
 
 Scan for things that should survive this session:
 
-- Corrections the user made (write to `memory/capture.md` with category: CORRECTION, PROCESS, PREFERENCE, WORKFLOW, or INSIGHT)
+- Corrections the user made: save them with the session's memory system (or `memory/capture.md` if the project already has one) with category: CORRECTION, PROCESS, PREFERENCE, WORKFLOW, or INSIGHT
 - Architectural or process decisions not yet recorded
 
 If everything was already captured during the session, say so.
@@ -54,7 +54,7 @@ Brief factual summary:
 - Started but unfinished
 - Discussed but not acted on
 
-If meaningful work happened, append to `reviews/daily/YYYY-MM-DD.md` under `## Session: [time]`. Day boundary is 5:00 AM.
+If meaningful work happened and the project has a `reviews/daily/` folder, append to `reviews/daily/YYYY-MM-DD.md` under `## Session: [time]` (day boundary 5:00 AM). Otherwise skip this; never create the folder.
 
 ### 4. Loose Ends
 
@@ -79,6 +79,6 @@ One-line summary + confirmation it's safe to close. E.g.:
 
 ## Not This
 
-- Not the evening routine (`routines/evening.md`) — no messaging, calendar, or life review
+- Not a personal/life review — no messaging, calendar, or life admin
 - Not a planning session — don't set tomorrow's priorities
 - Not a code review — just check state is clean

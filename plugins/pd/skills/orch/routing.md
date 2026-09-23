@@ -13,7 +13,7 @@ usually the most expensive model there is. So every spawn names its tier.
 | haiku | Mechanical, fully specified, list-driven: renames, applying a known pattern across files, lookups, "where is X" scouting, run-a-command-and-classify, verification runs |
 | sonnet | Most real work: multi-file features and fixes, tests, debugging with a clear repro, docs, research |
 | opus | Judgment where a wrong call is expensive: design, deletion decisions, security, subtle root-cause, adversarial review |
-| fable | Rare. One hard, self-contained question where extra thought changes the answer and opus-high fell short or plainly would. Hand it a distilled input — a findings file or the specific excerpt, never "go read the repo" — because every token it reads is billed at the top rate. It returns an answer, not a build. |
+| fable | **Only when the user has asked for Fable in this session, by name.** Otherwise escalate no higher than opus-high and say in the report that fable might help. When allowed: one hard, self-contained question where extra thought changes the answer and opus-high fell short or plainly would. Hand it a distilled input — a findings file or the specific excerpt, never "go read the repo" — because every token it reads is billed at the top rate. It returns an answer, not a build. |
 
 | Effort | Use for |
 |--------|---------|
@@ -21,7 +21,7 @@ usually the most expensive model there is. So every spawn names its tier.
 | medium | Default — the worker has to work out how |
 | high | Ambiguous, subtle, or a review where a miss is costly |
 
-Default is `sonnet-medium`. Start at the lowest tier that plausibly works; on failure escalate one
+Default is `sonnet-medium`. The ceiling without explicit user approval is `opus-high`. Start at the lowest tier that plausibly works; on failure escalate one
 step — effort first, then model — handing over what the failed attempt learned. Wrong-low costs
 one cheap retry; wrong-high is paid on every task.
 

@@ -3,7 +3,7 @@ name: create-issue
 description: Draft and submit a well-structured GitHub issue. Use when the user says "create an issue", "file an issue", "open an issue", "/create-issue", or describes a bug or feature that should be tracked on GitHub.
 argument-hint: "[owner/repo] description of the issue"
 disable-model-invocation: false
-allowed-tools: Bash(gh repo view *), Bash(gh api *), Bash(gh issue list *), Bash(gh issue create *), Bash(gh label list *), Bash(rm /tmp/*), Read, Write, Edit(**/todos.md), WebFetch, Glob, Grep
+allowed-tools: Bash(gh repo view *), Bash(gh issue list *), Bash(gh label list *), Bash(rm /tmp/issue-body.md), Read, Write(/tmp/issue-body.md), Edit(**/todos.md), Glob, Grep
 ---
 
 # Create a GitHub Issue
@@ -19,7 +19,7 @@ Create a high-quality GitHub issue for the repository specified in `$ARGUMENTS`.
 
 **Project conventions.** If `.claude/create-issue.md` exists in the project root, read it and follow it. It is the project's overlay for this skill: which repo(s) issues live on, required labels and their values (size, tier, section, …), extra body sections, and any submit-time rules. Where it conflicts with this file, the project file wins.
 
-For non-trivial issues (architectural, multi-system, unclear conventions), fetch CLAUDE.md:
+For non-trivial issues (architectural, multi-system, unclear conventions), read the local `CLAUDE.md` if the target repo is the current checkout. Otherwise fetch it (read-only GET; this call is not pre-approved and will prompt):
 
 ```
 gh api repos/{owner}/{repo}/contents/CLAUDE.md --jq .content | base64 -d

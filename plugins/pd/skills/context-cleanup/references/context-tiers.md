@@ -77,7 +77,7 @@ Content too large, too volatile, or too rarely needed to store in .claude/ files
 In CLAUDE.md or Tier 2 files, add a pointer:
 ```markdown
 For the full database schema, see `src/Data/` source files.
-For Syncfusion component docs, see https://blazor.syncfusion.com/documentation/
+For <library> component docs, see <official docs URL>
 ```
 
 ## Decision Flowchart

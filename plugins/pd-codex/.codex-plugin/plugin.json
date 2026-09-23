@@ -6,7 +6,7 @@
     "name": "Peter Drier"
   },
   "skills": "./skills/",
-  "repository": "https://github.com/peterdrier/skills",
+  "repository": "https://github.com/veryaaron/skills",
   "license": "MIT",
   "interface": {
     "displayName": "PD Codex",

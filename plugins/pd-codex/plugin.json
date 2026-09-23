@@ -6,7 +6,7 @@
   "author": {
     "name": "Peter Drier"
   },
-  "repository": "https://github.com/peterdrier/skills",
+  "repository": "https://github.com/veryaaron/skills",
   "license": "MIT",
   "keywords": ["codex", "orchestration", "subagents", "spend"]
 }
